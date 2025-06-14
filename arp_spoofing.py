@@ -9,11 +9,11 @@ import time
 #victim mac
 dstmac = b'\x__\x__\x__\x__\x__\x__'
 #router ip
-srcip = b'\xc0\xa8\x01\x27'
+srcip = b'\xc0\xa8\xe0\x21'
 #router mac
 srcmac = b'\x__\x__\x__\x__\x__\x__'
 #victim ip
-dstip = b'\xc0\xa8\x01\x01'
+dstip = b'\xc0\xa8\xe0\x71'
 
 def arp(srcip, dstmac, dstip):
 
