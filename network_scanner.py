@@ -47,5 +47,5 @@ def main(cidr):
     print_result(all_clients)
 
 if __name__ == '__main__':
-    cidr = input("Enter network ip address: ")
+    cidr = input("Enter network ip address (CIDR Notation): ")
     main(cidr)

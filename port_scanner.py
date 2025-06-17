@@ -57,15 +57,15 @@ def port_scan(target_host, start_port, end_port):
         for i, future in enumerate(concurrent.futures.as_completed(futures), start=1):
             port, service, banner, status = future.result()
             results.append((port, service, banner, status))
-            sys.stdout.write(f"\rProggress: {i}/total_ports ports scanned")
+            sys.stdout.write(f"\rProgress: {i}/total_ports ports scanned")
             sys.stdout.flush()
 
     sys.stdout.write("\n")
     print(format_port_results(results))
 
 if __name__ == '__main__':
-    target_host = input("Enter your target ip: ")
-    start_port = int(input("Enter the start port: "))
-    end_port = int(input("Enter end port: "))
+    target_host = input("[+] Enter your target ip: ")
+    start_port = int(input("[+] Enter the start port: "))
+    end_port = int(input("[+] Enter end port: "))
 
     port_scan(target_host, start_port, end_port)
